@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Task Management Dashboard
 
-## Getting Started
+## Overview
+Task Management Dashboard is a modern web application built with Next.js, TypeScript, Tailwind CSS, Redux Toolkit, and Redux Persist. It helps users manage tasks, track progress, and organize team members efficiently.
 
-First, run the development server:
+## Features
+1. Authentication
+* Login Page
+* Forgot Password Page
+* Form Validation using Zod
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Dashboard
+* Total Tasks Statistics
+* Completed Tasks Statistics
+* Pending Tasks Statistics
+* Team Member Statistics
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Task Management
+* Create Task
+* Edit Task
+* Delete Task
+* Search Tasks
+* Filter by Status
+* Filter by Priority
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Team Management
+* Add Team Members
+* View Team Members
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Additional Features
+* Redux Toolkit State Management
+* Redux Persist Data Persistence
+* Toast Notifications
+* Loading States
+* Error Handling
+* Responsive Design
 
-## Learn More
+## Tech Stack
+* Next.js 15
+* TypeScript
+* Tailwind CSS
+* Redux Toolkit
+* Redux Persist
+* React Hook Form
+* Zod
+* React Hot Toast
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
+Clone the repository : git clone <repository-url>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Navigate to the project : cd task-management-dashboard
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Install dependencies : npm install
 
-## Deploy on Vercel
+Run the development server : npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open : http://localhost:3000
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Screenshots
+
+### Homepage
+![Homepage](screenshots/Homepage.png)
+
+### LoginPage
+![LoginPage](screenshots/LoginPage.png)
+
+### Dashboard
+![DashboardPage](screenshots/DashboardPage.png)
+
+### Tasks
+![TasksPage](screenshots/TasksPage.png)
+
+### Team Members
+![TeammembersPage](screenshots/TeammembersPage.png)
+
+## Folder Structure
+task-management-dashboard/
+│
+├── app/
+│   ├── dashboard/
+│   │   ├── page.tsx
+│   │   ├── tasks/
+│   │   │   └── page.tsx
+│   │   └── team/
+│   │       └── page.tsx
+│   │
+│   ├── login/
+│   │   └── page.tsx
+│   │
+│   ├── forgot-password/
+│   │   └── page.tsx
+│   │
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── dashboard/
+│   │   └── StatCard.tsx
+│   │
+│   ├── tasks/
+│   │   └── TaskTable.tsx
+│   │
+│   └── team/
+│       └── TeamCard.tsx
+│
+├── data/
+│   ├── members.ts
+│   └── tasks.ts
+│
+├── lib/
+│   └── schemas/
+│       └── authSchemas.ts
+│
+├── redux/
+│   ├── memberSlice.ts
+│   ├── provider.tsx
+│   ├── store.ts
+│   └── taskSlice.ts
+│
+├── types/
+│   ├── member.ts
+│   └── task.ts
+│
+├── public/
+│
+├── .gitignore
+├── README.md
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── next.config.ts
+├── eslint.config.mjs
+└── postcss.config.mjs
+>>>>>>> da4d10f3d7ee8b83f376e6bd675be89ec64d969b
