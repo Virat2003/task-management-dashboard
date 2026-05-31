@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base background and text colors */
+  --background: #f8fafc;   /* slate-50: soft off-white, easier on the eyes than pure white */
+  --foreground: #0f172a;   /* slate-900: near-black for strong readable text */
+
+  /* Brand colors — used for primary buttons, active nav links, focus rings */
+  --brand: #2563eb;        /* blue-600: consistent with the buttons across the app */
+  --brand-hover: #1d4ed8;  /* blue-700: darker shade for hover states */
+
+  /* Surface color — cards, modals, form backgrounds */
+  --surface: #ffffff;
+
+  /* Border color — inputs, card borders, table borders */
+  --border: #e2e8f0;       /* slate-200 */
+
+  /* Muted text — descriptions, labels, placeholder-like content */
+  --muted: #64748b;        /* slate-500 */
 }
+
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;   /* slate-900: deep dark background */
+    --foreground: #f1f5f9;   /* slate-100: soft white text, not glaring */
+    --surface: #1e293b;      /* slate-800: slightly lighter than bg for cards */
+    --border: #334155;       /* slate-700: visible but subtle borders in dark mode */
+    --muted: #94a3b8;        /* slate-400: muted text stays readable in dark */
   }
 }
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
